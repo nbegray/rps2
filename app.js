@@ -116,7 +116,9 @@ $(document).ready(function () {
 
         // Next Train
         var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+        
         var nextTrainConv = moment(nextTrain).format("HH:mm");
+
         console.log("ARRIVAL TIME: " + moment(nextTrain).format("HH:mm"));
 
         // Create the new row
