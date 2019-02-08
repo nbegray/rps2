@@ -30,20 +30,19 @@ $(document).ready(function () {
 
 
 
-        // Creates local "temporary" object for holding employee data
+        // Creates local "temporary" object for holding train data
         var newTrain = {
             name: trainName,
             destination: trainDest,
             start: trainStart,
             frequency: trainFreq,
-            //arrival: nextTrain,
-            //minutes: tMinutesTillTrain,
+            
         };
 
 
 
 
-        // Uploads employee data to the database
+        // Uploads train data to the database
         database.ref().push(newTrain);
 
 
@@ -71,7 +70,7 @@ $(document).ready(function () {
 
 
 
-    // 3. Create Firebase event for adding employee to the database and a row in the html when a user adds an entry
+    // 3. Create Firebase event for adding trains to the database and a row in the html when a user adds an entry
     database.ref().on("child_added", function (childSnapshot) {
 
 
@@ -88,13 +87,12 @@ $(document).ready(function () {
 
 
 
-        // Employee Info
+        // Train Info
         console.log(trainName);
         console.log(trainDest);
         console.log(trainStart);
         console.log(trainFreq);
-        //console.log(nextTrain);
-        //console.log(tMinutesTillTrain);
+        
 
         
         var firstTimeConverted = moment(trainStart, "HH:mm").subtract(1, "year");
@@ -138,7 +136,7 @@ $(document).ready(function () {
         $("#train-table > tbody").append(newRow);
 
 
-        // Assumptions - logic for the table times//
+       
 
         
 
