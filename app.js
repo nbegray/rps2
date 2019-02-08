@@ -19,7 +19,7 @@ $(document).ready(function () {
         // Grabs user input
         var trainName = $("#train-name").val().trim();
         var trainDest = $("#dest").val().trim();
-        var trainStart = moment($("#start").val().trim(), "HH:mm").format("X");
+        var trainStart = moment($("#start").val().trim(), "HH:mm").format('HH:mm'); 
         var trainFreq = $("#freq").val().trim();
         var trainArriv = $("#arrival").val().trim();
 
@@ -70,11 +70,8 @@ $(document).ready(function () {
         console.log(trainFreq);
         console.log(trainArriv);
 
-        var trainStart = moment($("#start").val().trim(), "HH:mm").format("X");
-        var trainStartConv = moment(trainStart).format("HH:mm");
+        
 
-        // // Prettify the employee start
-        // var empStartPretty = moment.unix(empStart).format("MM/DD/YYYY");
 
         // // Calculate the months worked using hardcore math
         // // To calculate the months worked
@@ -89,8 +86,8 @@ $(document).ready(function () {
         var newRow = $("<tr>").append(
             $("<td>").text(trainName),
             $("<td>").text(trainDest),
-            $("<td>").text(trainStartConv),
-            //$("<td>").text(empStartPretty),
+            $("<td>").text(trainStart),
+            $("<td>").text(trainFreq),
             //$("<td>").text(empMonths),
             // $("<td>").text(empRate),
             // $("<td>").text(empBilled)
