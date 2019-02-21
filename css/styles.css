@@ -1,0 +1,16 @@
+body {
+    background: url("../images/trainback.jpg")no-repeat center center fixed; 
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-color: lightcyan;
+        
+      }
+    
+      .card-header{
+        background-color: rgb(196, 213, 230)
+      }
+      
